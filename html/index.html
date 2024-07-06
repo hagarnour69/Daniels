@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daniels</title>
-    <link rel="icon" href="../images/favicon.ico" />
+    <title>weatherapp</title>
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <!--bootstraplink-->
     <link rel="stylesheet" href="../css/style.css" />
     <!--my css stylesheet-->
   </head>
-  <body data-bs-spy="scroll" data-bs-target="#my-nav">
+  <body>
     <!--*start navbar-->
-    <nav
-      id="my-nav"
-      class="navbar navbar-expand-lg bg-black bg-opacity-25 fixed-top nav-underline"
-    >
-      <div class="container w-75 pt-2">
-        <a class="navbar-brand h1 text-white" href="#">DANIELS</a>
+    <nav id="my-nav" class="navbar navbar-expand-lg nav-underline second-bg ">
+      <div class="container w-75">
+        <a class="navbar-brand h6 text-white" href="#"
+          ><img
+            src="../images/images1.png"
+            class="w-25 me-2"
+            alt=""
+          />weather</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -31,27 +33,22 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
             <li class="nav-item p-3">
-              <a class="nav-link active" aria-current="page" href="#home"
+              <a class="nav-link active  " aria-current="page" href="#home"
                 >Home</a
               >
             </li>
             <li class="nav-item p-3">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#news">news</a>
             </li>
             <li class="nav-item p-3">
-              <a class="nav-link" href="#services">Services</a>
+              <a class="nav-link" href="#cams">Live cameras</a>
             </li>
             <li class="nav-item p-3">
-              <a class="nav-link" href="#Portfolio">Works</a>
+              <a class="nav-link" href="#photos">photos</a>
             </li>
-            <li class="nav-item p-3">
-              <a class="nav-link" href="#testimonials">client</a>
-            </li>
-            <li class="nav-item p-3">
-              <a class="nav-link" href="#ourTeam">Team</a>
-            </li>
+            
             <li class="nav-item p-3">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
@@ -60,1303 +57,135 @@
       </div>
     </nav>
     <!--*end navbar-->
-
-    <!--*start header -->
-    <header
-      id="home"
-      class="vh-100 d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="main-title text-center">
-        <h2 class="text-white">Hello</h2>
-        <h1 class=" text-white pt-3">I Am <span id="element" class="text-white fw-bold "></span></h1>
-
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-        <script>
-          var typed = new Typed("#element", {
-            strings: ["Larry Daniels", "Programmer", "Designer"],
-            typeSpeed: 50,
-            loop: true,
-          });
-        </script>
-        
+    <section class="hero py-5">
+      <div class="container my-5 text-center position-relative mb-5">
+        <input
+          type="text"
+          placeholder="Find your location"
+          class="w-75 py-3 px-3 rounded-pill m-3 second-bg border-0 text-white"
+          id="searchInput"
+        />
+        <button
+          type="button"
+          class="position-absolute search-input rounded-pill px-4 border-0 blue-bg"
+          id="search"
+        >
+          Find
+        </button>
       </div>
-      <div class="home-icon mt-5">
-        <div class="row d-flex justify-content-evenly">
-          <div class="row">
-            <div class="col-2">
-              <a class="fa-stack fa-1x" href="">
-                <i
-                  class="fa-solid fa-circle fa-stack-2x text-black text-opacity-50"
-                ></i>
-                <i
-                  class="fa-brands fa-facebook-f fa-stack-1x fa-inverse text-white"
-                ></i>
-              </a>
-            </div>
-            <div class="col-2">
-              <a class="fa-stack fa-1x" href="">
-                <i
-                  class="fa-solid fa-circle fa-stack-2x text-black text-opacity-50"
-                ></i>
-                <i
-                  class="fa-brands fa-linkedin-in fa-stack-1x fa-inverse text-white"
-                ></i>
-              </a>
-            </div>
-            <div class="col-2">
-              <a class="fa-stack fa-1x" href="">
-                <i
-                  class="fa-solid fa-circle fa-stack-2x text-black text-opacity-50"
-                ></i>
-                <i
-                  class="fa-brands fa fa-youtube fa-stack-1x fa-inverse text-white"
-                ></i>
-              </a>
-            </div>
-            <div class="col-2">
-              <a class="fa-stack fa-1x" href="">
-                <i
-                  class="fa-solid fa-circle fa-stack-2x text-black text-opacity-50"
-                ></i>
-                <i
-                  class="fa-brands fa fa-behance fa-stack-1x fa-inverse text-white"
-                ></i>
-              </a>
-            </div>
-            <div class="col-2">
-              <a class="fa-stack fa-1x" href="">
-                <i
-                  class="fa-solid fa-circle fa-stack-2x text-black text-opacity-50"
-                ></i>
-                <i
-                  class="fa-brands fa fa-twitter fa-stack-1x fa-inverse text-white"
-                ></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!--* end header -->
-    <!--*about section start-->
-    <section id="about" class="about py-5">
+      <!-- &weather cards -->
       <div class="container w-75">
-        <div class="row">
-          <div class="col-lg-5">
-            <div class="devolper-img position-relative p-4 z-3">
-              <img class="img-fluid" src="../images/hero.jpg" alt="jerry" />
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="about-caption pt-lg-0 pt-4">
-              <h2 class="fw-bolder h3">About Me.</h2>
-              <span class="d-inline-block mb-4 font-monospace"
-                >UI / UX DESIGNER & WEB DEVELOPER</span
+        <div class="waether-cards">
+          <div class="row">
+            <!--^ first day-->
+            <div class="col-lg-4 p-0 rounded-start-3 dark-bg">
+              <div
+                class="today-date d-flex justify-content-between pt-2 px-2 rounded-start-3 bg-opacity-25 bg-dark"
               >
-              <p>
-                I am <span class="fw-bold">Jerry Daniels</span> Lorem Ipsum is
-                simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever It
-                has survived not only five centuries, but also the leap into
-                electronic but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s
-                with the release of Letraset sheets containing
-              </p>
-
-              <div class="myprogress-bars pb-4">
-                <div
-                  class="first progress my-4"
-                  role="progressbar"
-                  aria-label="Example "
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar bg-black">
-                    <div
-                      class="progress-content px-1 d-flex justify-content-between"
-                    >
-                      <p class="my-0 fw-semibold">web Design</p>
-                      <p class="my-0">95%</p>
-                    </div>
-                  </div>
+                <p id="day"></p>
+                <p><span id="date"></span> <span id="month"></span></p>
+              </div>
+              <div class="today-body py-4 px-3">
+                <p id="city">Cairo</p>
+                <p class="h1 fw-bolder text-white">
+                  <span id="temperture"></span>&#176;C
+                </p>
+                <img alt="" id="weatherImage" />
+                <p id="status" class="blue-text"></p>
+              </div>
+              <div class="today-footer d-flex px-3">
+                <div class="rain d-flex me-3">
+                  <img src="../images/images4.png" alt="" class="me-1" />
+                  <p id="humdity">20</p>
                 </div>
-                <div
-                  class="second progress my-4"
-                  role="progressbar"
-                  aria-label="Example "
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar bg-black">
-                    <div
-                      class="progress-content px-1 d-flex justify-content-between"
-                    >
-                      <p class="my-0 fw-semibold">Branding</p>
-                      <p class="my-0">80%</p>
-                    </div>
-                  </div>
+                <div class="humdity d-flex me-3">
+                  <img src="../images/images5.png" alt="" class="me-1" />
+                  <p><span id="wind"></span> km/hr</p>
                 </div>
-                <div
-                  class="third progress my-4"
-                  role="progressbar"
-                  aria-label="Example "
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar bg-black">
-                    <div
-                      class="progress-content px-1 d-flex justify-content-between"
-                    >
-                      <p class="my-0 fw-semibold">Devolpment</p>
-                      <p class="my-0">90%</p>
-                    </div>
-                  </div>
+                <div class="d-flex me-3">
+                  <img src="../images/images6.png" alt="" class="me-1" />
+                  <p id="direction"></p>
                 </div>
               </div>
-
-              <div class="about-btns d-flex">
-                <button type="button" class="btn btn-dark px-3 me-1">
-                  <a class="text-decoration-none" href="" download=""
-                    >Download Cv</a
-                  >
-                </button>
-                <button type="button" class="btn btn-light px-4" href="">
-                  contact me
-                </button>
+            </div>
+            <!-- second day-->
+            <div class="col-lg-4 px-0 text-center second-bg">
+              <div class="tomorrow-header py-1 w-100 dark-bg bg-opacity-10">
+                <p class="nextDay">sunday</p>
+              </div>
+              <div class="tomorrow-body">
+                <img class="tomorrow-img my-4" alt="" />
+                <p class="h3 text-white">
+                  <span class="nextDayTemperture">30</span>&#176;C
+                </p>
+                <p class=""><span class="nextmin_c">10</span>&#176;C</p>
+                <p class="nextDaystaus blue-text">sunny</p>
+              </div>
+            </div>
+            <!-- third day-->
+            <div class="col-lg-4 px-0 text-center rounded-end-3 dark-bg">
+              <div
+                class="tomorrow-header py-1 w-100 rounded-end-3 bg-opacity-25 bg-dark"
+              >
+                <p class="nextDay">sunday</p>
+              </div>
+              <div class="tomorrow-body">
+                <img class="tomorrow-img my-4" alt="" />
+                <p class="h3 text-white">
+                  <span class="nextDayTemperture">30</span>&#176;C
+                </p>
+                <p class=""><span class="nextmin_c">10</span>&#176;C</p>
+                <p class="nextDaystaus blue-text">sunny</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--*about section start-->
-    <!--*services section start-->
-    <section id="services" class="services py-5">
-      <div class="container w-75 text-center">
-        <header class="py-5 fs-1">
-          <div class="title d-inline-block position-relative">
-            <h2>Services.</h2>
-          </div>
-        </header>
-        <main>
-          <div class="services-content">
-            <div class="row gy-3">
-              <div class="col-lg-4">
-                <div class="content-outer text-center p-2">
-                  <div
-                    class="content-inner p-5 border-white rounded bg-white shadow"
-                  >
-                    <span class="fa-stack fa-2x mb-3">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i
-                        class="icons fa-solid fa fa-laptop fa-stack-1x fa-inverse"
-                      ></i>
-                    </span>
-                    <h6>Web Design</h6>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the Lorem Ipsum has
-                      been the industry's standard dummy text ever
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="content-outer text-center p-2">
-                  <div
-                    class="content-inner p-5 border-white rounded bg-white shadow"
-                  >
-                    <span class="fa-stack fa-2x mb-3">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i
-                        class="icons fa-solid fa fa-bullhorn fa-stack-1x fa-inverse"
-                      ></i>
-                    </span>
-                    <h6>Branding</h6>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the Lorem Ipsum has
-                      been the industry's standard dummy text ever
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="content-outer text-center p-2">
-                  <div
-                    class="content-inner p-5 border-white rounded bg-white shadow"
-                  >
-                    <span class="fa-stack fa-2x mb-3">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i
-                        class="icons fa-solid fa fa-umbrella fa-stack-1x fa-inverse"
-                      ></i>
-                    </span>
-                    <h6>Development</h6>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the Lorem Ipsum has
-                      been the industry's standard dummy text ever
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="content-outer text-center p-2">
-                  <div
-                    class="content-inner p-5 border-white rounded bg-white shadow"
-                  >
-                    <span class="fa-stack fa-2x mb-3">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i
-                        class="icons fa-regular fa fa-gem fa-stack-1x fa-inverse"
-                      ></i>
-                    </span>
-                    <h6>Craetive Design</h6>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the Lorem Ipsum has
-                      been the industry's standard dummy text ever
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="content-outer text-center p-2">
-                  <div
-                    class="content-inner p-5 border-white rounded bg-white shadow"
-                  >
-                    <span class="fa-stack fa-2x mb-3">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i
-                        class="icons fa-solid fa fa-television fa-stack-1x fa-inverse"
-                      ></i>
-                    </span>
-                    <h6>Fully responsive</h6>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the Lorem Ipsum has
-                      been the industry's standard dummy text ever
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="content-outer text-center p-2">
-                  <div
-                    class="content-inner p-5 border-white rounded bg-white shadow"
-                  >
-                    <span class="fa-stack fa-2x mb-3">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i
-                        class="icons fa-solid fa fa-camera fa-stack-1x fa-inverse"
-                      ></i>
-                    </span>
-                    <h6>Retina Ready</h6>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the Lorem Ipsum has
-                      been the industry's standard dummy text ever
-                    </p>
-                  </div>
-                </div>
-              </div>
+    <footer>
+      <footer class="footer text-center p-4 second-bg">
+        <div
+          class="footer-icon d-flex align-items-center justify-content-center bg-opacity-75 my-4"
+        >
+          <div class="row gx-0 my-row">
+            <div class="col-3">
+              <a class="fa-stack fa-x" href="">
+                <i class="fa-solid fa-circle fa-stack-2x icon-bg"></i>
+                <i
+                  class="my-facebook fa-brands fa-facebook-f fa-stack-1x fa-inverse blue-text"
+                ></i>
+              </a>
             </div>
-          </div>
-        </main>
-      </div>
-    </section>
-    <!--*services section end-->
-    <!--*portfolio section start----->
-    <section id="Portfolio" class="porfolio py-5">
-      <div class="container w-75 text-center">
-        <!--^portfolio nav-->
-        <header class="py-5 fs-1">
-          <div class="title d-inline-block position-relative">
-            <h2>Portfolio.</h2>
-          </div>
-        </header>
-        <nav>
-          <ul
-            class="nav nav-underline justify-content-center align-items-center fw-bolder gap-4"
-            id="myTab"
-            role="tablist"
-          >
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="all-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#all"
-                type="button"
-                role="tab"
-                aria-controls="all"
-                aria-selected="true"
-              >
-                All
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="Brand-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#Brand"
-                type="button"
-                role="tab"
-                aria-controls="Brand"
-                aria-selected="false"
-              >
-                Brand
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="Design-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#Design"
-                type="button"
-                role="tab"
-                aria-controls="Design"
-                aria-selected="false"
-              >
-                Design
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="Graphic-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#Graphic"
-                type="button"
-                role="tab"
-                aria-controls="Graphic"
-                aria-selected="false"
-              >
-                Graphic
-              </button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--^portfolio main-->
-        <main class="mt-5">
-          <div class="tab-content">
-            <div
-              class="tab-pane active"
-              id="all"
-              role="tabpanel"
-              aria-labelledby="all-tab"
-              tabindex="0"
-            >
-              <div class="row gy-4">
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/1.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg m-2">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg m-2">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/2.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/3.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/4.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/5.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/6.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-3">
+              <a class="fa-stack fa-1x" href="">
+                <i class="fa-solid fa-circle fa-stack-2x icon-bg"></i>
+                <i
+                  class="my-twitter fa-brands fa-twitter fa-stack-1x fa-inverse blue-text"
+                ></i>
+              </a>
             </div>
-            <div
-              class="tab-pane"
-              id="Brand"
-              role="tabpanel"
-              aria-labelledby="Brand-tab"
-              tabindex="0"
-            >
-              <div class="row gy-4">
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/4.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/6.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-3">
+              <a class="fa-stack fa-1x" href="">
+                <i class="fa-solid fa-circle fa-stack-2x icon-bg"></i>
+                <i
+                  class="my-pin fa-brands fa-pinterest-p fa-stack-1x fa-inverse blue-text"
+                ></i>
+              </a>
             </div>
-            <div
-              class="tab-pane"
-              id="Design"
-              role="tabpanel"
-              aria-labelledby="Design-tab"
-              tabindex="0"
-            >
-              <div class="row gy-4">
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/2.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/5.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tab-pane"
-              id="Graphic"
-              role="tabpanel"
-              aria-labelledby="Graphic-tab"
-              tabindex="0"
-            >
-              <div class="row gy-4">
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/1.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/5.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 mb- portfolio-item overflow-hidden position-relative"
-                >
-                  <img
-                    class="img-fluid"
-                    src="../images/portfolio/4.jpg"
-                    alt="charger"
-                  />
-                  <div
-                    class="portfolio-card-layer bg-white position-absolute d-flex align-items-center justify-content-center flex-column bg-black"
-                  >
-                    <h6 class="fs-5 fw-bold mb-">Web Design</h6>
-                    <div class="card-icons">
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-chain-broken fa-stack-1x fa-inverse text-white lack"
-                        ></i>
-                      </span>
-                      <span class="fa-stack fa-lg hover-style">
-                        <i
-                          class="fa-solid fa-circle fa-stack-2x text-black"
-                        ></i>
-                        <i
-                          class="fa-solid fa-search-plus fa-stack-1x fa-inverse text-white"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </section>
-    <!--*portfolio section end----->
-    <!--*Testimonials section start----->
-    <section id="testimonials" class="testimonials py-5">
-      <div
-        class="container w-75 py-5 justify-content-center align-items-center text-center"
-      >
-        <header class="py-5 fs-1">
-          <div class="title d-inline-block position-relative">
-            <h2>Testimonials.</h2>
-          </div>
-        </header>
-        <main>
-          <div class="my-carsoul">
-            <div id="carouselExampleCaptions" class="carousel slide">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active mb-4">
-                  <div class="myCarousel-contet text-center mb-5">
-                    <img
-                      class="rounded-circle img-fluid mb-3"
-                      src="../images/1_New1.jpg"
-                      class="d-block"
-                      alt="test1"
-                    />
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Praesentium aliquam voluptatibus provident facere placeat
-                      consequuntur architecto itaque veritatis inventore
-                      officiis?
-                    </p>
-                    <h6 class="fw-bold mt-5">Alix Smith</h6>
-                    <span class="fw-bolder">Evanto customer</span>
-                  </div>
-                </div>
-                <div class="carousel-item mb-4">
-                  <div class="myCarousel-contet text-center mb-5">
-                    <img
-                      class="rounded-circle img-fluid mb-3"
-                      src="../images/1_New1.jpg"
-                      class="d-block"
-                      alt="test1"
-                    />
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Praesentium aliquam voluptatibus provident facere placeat
-                      consequuntur architecto itaque veritatis inventore
-                      officiis?
-                    </p>
-                    <h6 class="fw-bold mt-5">Alix Smith</h6>
-                    <span class="fw-bolder">Evanto customer</span>
-                  </div>
-                </div>
-                <div class="carousel-item mb-4">
-                  <div class="myCarousel-contet text-center mb-5">
-                    <img
-                      class="rounded-circle img-fluid mb-3"
-                      src="../images/1_New1.jpg"
-                      class="d-block"
-                      alt="test1"
-                    />
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Praesentium aliquam voluptatibus provident facere placeat
-                      consequuntur architecto itaque veritatis inventore
-                      officiis?
-                    </p>
-                    <h6 class="fw-bold mt-5">Alix Smith</h6>
-                    <span class="fw-bolder">Evanto customer</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </section>
-    <!--*Testimonials section end----->
-    <!--* facts style start-->
-    <section id="facts" class="facts-section py-5">
-      <div class="container w-75 py-5">
-        <div class="row">
-          <div class="col-lg-3 mb-lg-0 mb-5">
-            <div class="fact text-center">
-              <div class="fact1">
-                <i class="fa fa-users fa-2xl mb-4"></i>
-                <h3 class="my-4">638</h3>
-                <p class="fw-semibold">Happy Customers</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 mb-lg-0 mb-5">
-            <div class="fact text-center">
-              <div class="fact1">
-                <i class="fa fa-thumbs-up fa-2xl mb-4"></i>
-                <h3 class="my-4">230</h3>
-                <p class="fw-semibold">Complete Projects</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 mb-lg-0 mb-5">
-            <div class="fact text-center">
-              <div class="fact1">
-                <i class="fa fa-bullhorn fa-2xl mb-4"></i>
-                <h3 class="my-4">9465</h3>
-                <p class="fw-semibold">Line of code</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 mb-lg-0 mb-5">
-            <div class="fact text-center">
-              <div class="fact1">
-                <i class="fa fa-cloud-arrow-down fa-2xl mb-4"></i>
-                <h3 class="my-4">780</h3>
-                <p class="fw-semibold">F ile downloaded</p>
-              </div>
+            <div class="col-3">
+              <a class="fa-stack fa-1x" href="">
+                <i class="fa-solid fa-circle fa-stack-2x icon-bg"></i>
+                <i
+                  class="my-linked fa-brands fa-linkedin-in fa-stack-1x fa-inverse blue-text"
+                ></i>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--* facts style end-->
-    <!--* ourTeam start-->
-    <section id="ourTeam" class="ourTeam py-5">
-      <div class="container w-75 text-center">
-        <header class="py-5 fs-1">
-          <div class="title d-inline-block position-relative">
-            <h2>Our Team.</h2>
-          </div>
-        </header>
-        <main>
-          <div class="ourTeam-content">
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="team-outer p-2">
-                  <div class="team-inner overflow-hidden">
-                    <figure>
-                      <div class="team-img overflow-hidden position-relative">
-                        <img
-                          class="img-fluid"
-                          src="../images/1.jpg"
-                          alt="team1"
-                        />
-                        <div
-                          class="ourteam-icon d-flex align-items-center justify-content-center bg-white bg-opacity-75 position-absolute"
-                        >
-                          <div class="row gx-0 my-row">
-                            <div class="col-3">
-                              <a class="fa-stack fa-x " href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black "
-                                ></i>
-                                <i
-                                  class="my-facebook fa-brands fa-facebook-f fa-stack-1x fa-inverse text-white "
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-twitter fa-brands fa-twitter fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-pin fa-brands fa-pinterest-p fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-linked fa-brands fa-linkedin-in fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="caption p-2 bg- rounded-bottom-1">
-                        <h4 class="text-white fw-lighter pt-3">Claire Chedd</h4>
-                        <h5 class="text-white">Back-End Developer</h5>
-                      </div>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="team-outer p-2">
-                  <div class="team-inner overflow-hidden">
-                    <figure>
-                      <div class="team-img overflow-hidden position-relative">
-                        <img
-                          class="img-fluid"
-                          src="../images/2.jpg"
-                          alt="team1"
-                        />
-                        <div
-                          class="ourteam-icon d-flex align-items-center justify-content-center bg-white bg-opacity-75 position-absolute"
-                        >
-                          <div class="row gx-0 my-row">
-                            <div class="col-3">
-                              <a class="fa-stack fa-x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-facebook fa-brands fa-facebook-f fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-twitter fa-brands fa-twitter fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-pin fa-brands fa-pinterest-p fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-linked fa-brands fa-linkedin-in fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="caption p-2 bg- rounded-bottom-1">
-                        <h4 class="text-white fw-lighter pt-3">Claire Chedd</h4>
-                        <h5 class="text-white">Back-End Developer</h5>
-                      </div>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="team-outer p-2">
-                  <div class="team-inner overflow-hidden">
-                    <figure>
-                      <div class="team-img overflow-hidden position-relative">
-                        <img
-                          class="img-fluid"
-                          src="../images/1.jpg"
-                          alt="team1"
-                        />
-                        <div
-                          class="ourteam-icon d-flex align-items-center justify-content-center bg-white bg-opacity-75 position-absolute"
-                        >
-                          <div class="row gx-0 my-row">
-                            <div class="col-3">
-                              <a class="fa-stack fa-x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-facebook fa-brands fa-facebook-f fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-twitter fa-brands fa-twitter fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-pin fa-brands fa-pinterest-p fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                            <div class="col-3">
-                              <a class="fa-stack fa-1x" href="">
-                                <i
-                                  class="fa-solid fa-circle fa-stack-2x text-black"
-                                ></i>
-                                <i
-                                  class="my-linked fa-brands fa-linkedin-in fa-stack-1x fa-inverse text-white"
-                                ></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="caption p-2 bg- rounded-bottom-1">
-                        <h4 class="text-white fw-lighter pt-3">Claire Chedd</h4>
-                        <h5 class="text-white">Back-End Developer</h5>
-                      </div>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </section>
-    <!--* ourTeam end-->
-    <!--* contact us strat-->
-    <section id="contact" class="contact py-5">
-      <div class="container w-75 px-5">
-        <header class="py-5 fs-1 text-center">
-          <div class="title d-inline-block position-relative">
-            <h2>Contact Us.</h2>
-          </div>
-        </header>
-        <main>
-          <div class="contact-info mb-5 px-4">
-            <div class="row gy-2">
-              <!--first item-->
-              <div class="col-lg-4">
-                <div class="content flex-column text-center p-3">
-                  <span class="fa-stack fa-2x mb-3">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i
-                      class="icons fa-solid fa fa-location-arrow fa-stack-1x fa-inverse"
-                    ></i>
-                  </span>
-                  <h6>Adress</h6>
-                  <p>6834 Hollywood Blvd - Los Angeles CA</p>
-                </div>
-              </div>
-              <!--second item-->
-              <div class="col-lg-4">
-                <div class="content flex-column text-center p-3">
-                  <span class="fa-stack fa-2x mb-3">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i
-                      class="icons fa-solid fa fa-envelope fa-stack-1x fa-inverse"
-                    ></i>
-                  </span>
-                  <h6>Email</h6>
-                  <p>Support@website.com</p>
-                </div>
-              </div>
-              <!--third item-->
-              <div class="col-lg-4">
-                <div class="content flex-column text-center p-3">
-                  <span class="fa-stack fa-2x mb-3">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i
-                      class="icons fa-solid fa fa-phone fa-stack-1x fa-inverse"
-                    ></i>
-                  </span>
-                  <h6>Phone</h6>
-                  <p>+20 010 2517 8918</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <form action="" class="px-lg-4">
-            <div class="inputs mb-3">
-              <div class="row">
-                <div class="col-lg-6 mb-3">
-                  <input
-                    type="text"
-                    class="form-control border-0"
-                    id="name"
-                    placeholder="Name"
-                    name="name"
-                  />
-                </div>
-                <div class="col-lg-6 mb-3">
-                  <input
-                    type="email"
-                    class="form-control border-0"
-                    id="email"
-                    placeholder="Email"
-                    name="email"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control border-0 mb-4"
-                id="msg"
-                rows="3"
-                name="Message"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-dark px-5" href="">
-              submit
-            </button>
-          </form>
-        </main>
-      </div>
-    </section>
-    <!--* contact us end-->
-    <footer class="footer text-center p-4">
-      <p>Copy Right 2018 © By Daniels All Rights Reserved</p>
+        <p>Copy Right 2024 © By HajarNour All Rights Reserved</p>
+      </footer>
     </footer>
-    <!--bsjsfile-->
-    <script class=" " src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
